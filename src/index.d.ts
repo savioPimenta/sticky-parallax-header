@@ -74,6 +74,7 @@ export type TabbedHeaderProps = SharedProps &
     scrollEvent?: (event: NativeSyntheticEvent<NativeScrollEvent>) => void;
     title?: string;
     titleStyle?: TextStyle;
+    parallaxHeight?: number;
   };
 
 export type DetailsHeaderProps = SharedProps &
