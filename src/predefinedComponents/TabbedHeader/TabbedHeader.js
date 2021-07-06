@@ -162,7 +162,7 @@ export default class TabbedHeader extends React.Component {
 
     return (
       <>
-        <StatusBar barStyle="light-content" backgroundColor={backgroundColor} translucent />
+        <StatusBar barStyle="dark-content" backgroundColor={backgroundColor} translucent />
         <StickyParallaxHeader
           foreground={this.renderForeground(this.scrollY)}
           header={this.renderHeader()}
