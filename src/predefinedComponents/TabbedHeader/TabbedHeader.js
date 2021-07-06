@@ -167,7 +167,7 @@ export default class TabbedHeader extends React.Component {
           foreground={this.renderForeground(this.scrollY)}
           header={this.renderHeader()}
           deviceWidth={constants.deviceWidth}
-          parallaxHeight={this.parallaxHeight}
+          parallaxHeight={parallaxHeight}
           scrollEvent={event([{ nativeEvent: { contentOffset: { y: this.scrollY.y } } }], {
             useNativeDriver: false,
             listener: (e) => scrollEvent && scrollEvent(e),
