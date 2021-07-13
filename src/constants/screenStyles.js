@@ -27,8 +27,10 @@ const screenStyles = StyleSheet.create({
   },
   foreground: {
     flex: 1,
+    flexDirection: "row",
     paddingHorizontal: 24,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
+    alignItems: "center",
   },
   background: {
     width: '100%',
@@ -57,6 +59,7 @@ const screenStyles = StyleSheet.create({
   messageContainer: {
     paddingTop: 24,
     paddingBottom: 24,
+    paddingLeft: 24,
   },
   profilePic: {
     width: constants.responsiveWidth(18),

@@ -58,7 +58,7 @@ export default class TabbedHeader extends React.Component {
     const { title, subtitle, titleStyle, foregroundImage } = this.props;
     const messageStyle = titleStyle || styles.message;
     const startSize = constants.responsiveWidth(18);
-    const endSize = constants.responsiveWidth(10);
+    const endSize = constants.responsiveWidth(18);
     const [startImgFade, finishImgFade] = [this.scrollPosition(22), this.scrollPosition(27)];
     const [startImgSize, finishImgSize] = [this.scrollPosition(20), this.scrollPosition(30)];
     const [startTitleFade, finishTitleFade] = [this.scrollPosition(25), this.scrollPosition(45)];
