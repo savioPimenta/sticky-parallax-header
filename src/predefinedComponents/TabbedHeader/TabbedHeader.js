@@ -55,7 +55,7 @@ export default class TabbedHeader extends React.Component {
   };
 
   renderForeground = (scrollY) => {
-    const { title, titleStyle, foregroundImage } = this.props;
+    const { title, subtitle, titleStyle, foregroundImage } = this.props;
     const messageStyle = titleStyle || styles.message;
     const startSize = constants.responsiveWidth(18);
     const endSize = constants.responsiveWidth(10);
@@ -104,6 +104,7 @@ export default class TabbedHeader extends React.Component {
         {renderImage()}
         <Animated.View style={[styles.messageContainer, { opacity: titleOpacity }]}>
           <Text style={messageStyle}>{title}</Text>
+          {subtitle()}
         </Animated.View>
       </View>
     );
@@ -198,6 +199,7 @@ TabbedHeader.propTypes = {
   headerHeight: number,
   backgroundImage: Image.propTypes.source,
   title: string,
+  subtitle: func,
   bounces: bool,
   snapToEdge: bool,
   tabs: arrayOf(shape({})),
@@ -225,6 +227,7 @@ TabbedHeader.defaultProps = {
   headerHeight: sizes.headerHeight,
   backgroundImage: null,
   title: "Mornin' Mark! \nReady for a quiz?",
+  subtitle: () => {},
   bounces: true,
   snapToEdge: true,
   logo: require('../../assets/images/logo.png'),
